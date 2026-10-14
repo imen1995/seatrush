@@ -1,0 +1,16 @@
+[
+    {
+      "partnerRef": "venue-a-rock-night",
+      "title": "Rock Night",
+      "city": "Paris",
+      "startsAt": "2026-11-15T20:00:00Z",
+      "venueName": "Accor Arena"
+    },
+    {
+      "partnerRef": "venue-a-jazz-fest",
+      "title": "Jazz Festival",
+      "city": "Lyon",
+      "startsAt": "2026-12-01T19:30:00Z",
+      "venueName": "Halle Tony Garnier"
+    }
+  ]

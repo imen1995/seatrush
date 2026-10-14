@@ -1,0 +1,14 @@
+{
+    "request": {
+      "method": "GET",
+      "urlPath": "/partners/b/events"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "bodyFileName": "partner-b-events.json",
+      "fixedDelayMilliseconds": 1500
+    }
+  }

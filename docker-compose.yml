@@ -1,0 +1,30 @@
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: seatrush-postgres
+    environment:
+      POSTGRES_DB: seatrush
+      POSTGRES_USER: seatrush
+      POSTGRES_PASSWORD: seatrush
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U seatrush -d seatrush"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  wiremock:
+    image: wiremock/wiremock:3.9.1
+    container_name: seatrush-wiremock
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./infra/wiremock:/home/wiremock
+    command: ["--global-response-templating", "--verbose"]
+  
+volumes:
+  postgres_data:      
